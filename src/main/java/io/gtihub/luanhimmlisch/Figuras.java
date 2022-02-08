@@ -23,7 +23,7 @@ public class Figuras {
             App.println("Elige la figura a imprimir:\n\n1. Cuadrado\n2. Circulo\n3. Flecha\n4. Diamante\n5. Salir");
             figure = SCANNER.nextInt();
 
-            if (figure != 5) {
+            if (figure < 5) {
                 App.println("Inserta tamaño:");
                 length = SCANNER.nextInt();
             }
@@ -45,7 +45,7 @@ public class Figuras {
                     break;
             }
 
-            if (figure != 5)
+            if (figure < 5)
                 App.wait(2000);
 
         } while (figure != 5);
