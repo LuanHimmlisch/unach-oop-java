@@ -9,12 +9,10 @@ import java.util.Scanner; // el programa utiliza la clase Scanner
  * @author Luis Ángel Serrano Catalá
  */
 public class Comparaciones {
+    final static Scanner entrada = new Scanner(System.in);
     
     Comparaciones() 
     {
-        // crea objeto Scanner para obtener la entrada de la ventana de comandos
-        Scanner entrada = new Scanner(System.in);
-
         int numero1; // primer número a comparar
         int numero2; // segundo número a comparar
 
