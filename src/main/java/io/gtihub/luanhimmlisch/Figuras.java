@@ -46,7 +46,7 @@ public class Figuras {
             }
 
             if (figure != 5)
-                App.wait(1000);
+                App.wait(2000);
 
         } while (figure != 5);
 
@@ -72,7 +72,28 @@ public class Figuras {
     }
 
     private static final void circle(int radius) {
+        final int diametro = radius * 2 + 1;
 
+        char[][] chars = new char[diametro][diametro];
+
+        Arrays.stream(chars).forEach(a -> Arrays.fill(a, ' '));
+
+        for (int i = 0; i < 36; i++) {
+            final float angle = (float) Math.toRadians(i * 10);
+
+            final float[] points = circleToPoint(new float[] { radius, radius }, radius, angle);
+            final int pointX = Math.round(points[0]);
+            final int pointY = Math.round(points[1]);
+
+            chars[pointX][pointY] = '*';
+        }
+
+        for (int x = 0; x < chars.length; x++) {
+            for (int y = 0; y < chars[x].length; y++) {
+                App.print(chars[x][y] + " ");
+            }
+            App.println();
+        }
     }
 
     private static final void arrow(int length) {
@@ -112,6 +133,13 @@ public class Figuras {
         }
 
         App.print(diamond);
+    }
+
+    private static final float[] circleToPoint(float[] center, float radius, float angle) {
+        double x = center[0] + radius * Math.cos(angle);
+        double y = center[1] + radius * Math.sin(angle);
+
+        return new float[] { (float) x, (float) y };
     }
 
 }

@@ -26,8 +26,12 @@ public class App {
         System.out.println(string + "\n\n");
     }
 
+    public static final void println() {
+        System.out.println();
+    }
+
     public static final void print(String string) {
-        System.out.println(string);
+        System.out.print(string);
     }
 
     public static final void wait(int ms) {
