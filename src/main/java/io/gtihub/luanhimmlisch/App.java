@@ -1,5 +1,7 @@
 package io.gtihub.luanhimmlisch;
 
+import java.util.Scanner;
+
 /**
  * Clase principal
  * <p>
@@ -10,12 +12,15 @@ package io.gtihub.luanhimmlisch;
  * @see https://github.com/LuanHimmlisch/unach-oop-java
  */
 public class App {
+    private static Scanner SCANNER = new Scanner(System.in);
+
     public static void main(String[] args) {
         // new Suma();
         // new Comparaciones();
         // new Multiplicacion();
 
         new Figuras();
+        new HelloWorldTwoPointO();
     }
 
     public static final void clearTerminal() {
@@ -40,5 +45,13 @@ public class App {
         } catch (InterruptedException ex) {
             Thread.currentThread().interrupt();
         }
+    }
+
+    public static final String input(String string) {
+        App.println(string);
+        String num = SCANNER.nextLine();
+        App.println();
+
+        return num;
     }
 }
