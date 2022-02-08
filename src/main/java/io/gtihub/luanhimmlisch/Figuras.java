@@ -13,19 +13,16 @@ import java.util.Scanner;
  * @see https://github.com/LuanHimmlisch/unach-oop-java
  */
 public class Figuras {
-    static final Scanner SCANNER = new Scanner(System.in);
-
     Figuras() {
         Integer figure = 5, length = 0;
 
         do {
             App.clearTerminal();
-            App.println("Elige la figura a imprimir:\n\n1. Cuadrado\n2. Circulo\n3. Flecha\n4. Diamante\n5. Salir");
-            figure = SCANNER.nextInt();
+            figure = Integer.parseInt(App
+                    .input("Elige la figura a imprimir:\n\n1. Cuadrado\n2. Circulo\n3. Flecha\n4. Diamante\n5. Damas\n6. Salir"));
 
-            if (figure < 5) {
-                App.println("Inserta tamaño:");
-                length = SCANNER.nextInt();
+            if (figure < 6) {
+                length = Integer.parseInt(App.input("Inserta un tamaño"));
             }
 
             App.clearTerminal();
@@ -43,12 +40,15 @@ public class Figuras {
                 case 4:
                     diamond(length);
                     break;
+                case 5:
+                    checkboard(length);
+                    break;
             }
 
-            if (figure < 5)
+            if (figure < 6)
                 App.wait(2000);
 
-        } while (figure != 5);
+        } while (figure != 6);
 
         App.println("I'll be back...");
     }
@@ -88,12 +88,7 @@ public class Figuras {
             chars[pointX][pointY] = '*';
         }
 
-        for (int x = 0; x < chars.length; x++) {
-            for (int y = 0; y < chars[x].length; y++) {
-                App.print(chars[x][y] + " ");
-            }
-            App.println();
-        }
+        print2DArray(chars);
     }
 
     private static final void arrow(int length) {
@@ -135,11 +130,33 @@ public class Figuras {
         App.print(diamond);
     }
 
+    private static final void checkboard(int size) {
+        char[][] chars = new char[size * 8][size * 8];
+
+        for (int x = 0; x < chars.length; x++) {
+            for (int y = 0; y < chars.length; y++) {
+                // No es exactamente lo que pidió pero me gustó como quedó
+                chars[x][y] = Math.floor(((x + y) / size) % 2) == 0 ? '*' : ' ';
+            }
+        }
+
+        print2DArray(chars);
+    }
+
     private static final float[] circleToPoint(float[] center, float radius, float angle) {
         double x = center[0] + radius * Math.cos(angle);
         double y = center[1] + radius * Math.sin(angle);
 
         return new float[] { (float) x, (float) y };
+    }
+
+    private static void print2DArray(char[][] array) {
+        for (int x = 0; x < array.length; x++) {
+            for (int y = 0; y < array[x].length; y++) {
+                App.print(array[x][y] + " ");
+            }
+            App.println();
+        }
     }
 
 }
