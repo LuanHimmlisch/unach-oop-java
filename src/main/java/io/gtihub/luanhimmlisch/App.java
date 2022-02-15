@@ -19,8 +19,10 @@ public class App {
         // new Comparaciones();
         // new Multiplicacion();
 
-        new Figuras();
-        new HelloWorldTwoPointO();
+        // new Figuras();
+        // new HelloWorldTwoPointO();
+
+        new PruebaCuenta();
     }
 
     public static final void clearTerminal() {
