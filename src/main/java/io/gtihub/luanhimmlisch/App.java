@@ -15,6 +15,8 @@ public class App {
     private static Scanner SCANNER = new Scanner(System.in);
 
     public static void main(String[] args) {
+        clearTerminal();
+
         // new Suma();
         // new Comparaciones();
         // new Multiplicacion();
@@ -22,7 +24,9 @@ public class App {
         // new Figuras();
         // new HelloWorldTwoPointO();
 
-        new PruebaCuenta();
+        // new PruebaCuenta();
+
+        new FrecuenciaCardiacaRun();
     }
 
     public static final void clearTerminal() {
@@ -50,7 +54,7 @@ public class App {
     }
 
     public static final String input(String string) {
-        App.println(string);
+        App.print(string);
         String num = SCANNER.nextLine();
         App.println();
 
