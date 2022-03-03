@@ -1,10 +1,12 @@
 package io.gtihub.luanhimmlisch;
 
 import java.awt.Graphics;
+import java.awt.Font;
 import javax.swing.JPanel;
 
 /**
  * @author Ricardo Vega Morales
+ * @author Luis Ángel Serrano Catalá
  */
 public class PanelDibujo extends JPanel // JPanel superclase; PanelDibujo subclase
 {
@@ -16,19 +18,32 @@ public class PanelDibujo extends JPanel // JPanel superclase; PanelDibujo subcla
      */
     @Override
     public void paintComponent(Graphics g) {
-        // llama a paintComponent para asegurar que el panel se muestre correctamente
         super.paintComponent(g);
 
-        int anchura = getWidth(); // anchura total
-        int altura = getHeight(); // altura total
-        int i;
-        // dibuja una línea de la esquina superior izquierda a la esquina inferior
-        // derecha
+        final int TIMES = 15;
+        final int MODIFIER = 20;
+        final int SIZE = TIMES * MODIFIER;
 
-        g.drawLine(0, 0, anchura, altura);
+        for (int x = 0; x < TIMES; x++) {
+            g.drawLine(0, 0, x * MODIFIER, (TIMES - x) * MODIFIER);
+        }
 
-        // dibuja una línea de la esquina inferior izquierda a la esquina superior
-        // derecha
-        g.drawLine(0, altura, anchura, 0);
+        for (int x = 0; x < TIMES; x++) {
+            g.drawLine(SIZE, 0, (TIMES - x) * MODIFIER, (TIMES - x) * MODIFIER);
+        }
+
+        for (int x = 0; x < TIMES; x++) {
+            g.drawLine(SIZE, SIZE, (TIMES - x) * MODIFIER, x * MODIFIER);
+        }
+
+        for (int x = 0; x < TIMES; x++) {
+            g.drawLine(0, SIZE, x * MODIFIER, x * MODIFIER);
+        }
+
+        final int FONT_SIZE = 72;
+        final String TEXT = "Cuadradito chido";
+
+        g.setFont(new Font("Comic Sans MS", Font.PLAIN, FONT_SIZE));
+        g.drawString(TEXT, 0, SIZE + FONT_SIZE);
     }
 }
