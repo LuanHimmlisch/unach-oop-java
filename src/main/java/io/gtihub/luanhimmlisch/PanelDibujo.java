@@ -40,8 +40,8 @@ public class PanelDibujo extends JPanel // JPanel superclase; PanelDibujo subcla
             g.drawLine(0, SIZE, x * MODIFIER, x * MODIFIER);
         }
 
-        final int FONT_SIZE = 72;
-        final String TEXT = "Cuadradito chido";
+        final int FONT_SIZE = 32;
+        final String TEXT = "Cuadradito gang";
 
         g.setFont(new Font("Comic Sans MS", Font.PLAIN, FONT_SIZE));
         g.drawString(TEXT, 0, SIZE + FONT_SIZE);
