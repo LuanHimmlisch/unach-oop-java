@@ -1,0 +1,22 @@
+<mxfile host="65bd71144e">
+    <diagram id="TqgGuQV-_dZQ31EBvay0" name="Page-1">
+        <mxGraphModel dx="1067" dy="802" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="PerfilMedico" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="205" y="220" width="440" height="470" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="- name: String&#10;- lastname: String&#10;- birthday: int&#10;- birthMonth: int&#10;- birthYear: int&#10;- height: float&#10;- weight: float" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="3" vertex="1">
+                    <mxGeometry y="26" width="440" height="114" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="line;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="3" vertex="1">
+                    <mxGeometry y="140" width="440" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="+ getName() : String&#10;+ setName(name : String) : PerfilMedico&#10;+ getLastname() : String&#10;+ setLastname(lastname : String) : PerfilMedico&#10;+ getGender() : String&#10;+ setGender(gender : String) : PerfilMedico&#10;+ getBirthday() : int&#10;+ setBirthday(birthday : int) : PerfilMedico&#10;+ getBirthMonth() : int&#10;+ setBirthMonth(birthMonth : int) : PerfilMedico&#10;+ getBirthYear() : int&#10;+ setBirthYear(birthYear : int) : PerfilMedico&#10;+ setBirthDate(birthday : int, birthMonth : int, birthYear : int) : PerfilMedico&#10;+ getHeight() : float&#10;+ setHeight(height : float) : PerfilMedico&#10;+ getWeight() : float&#10;+ setWeight(weight : float) : PerfilMedico&#10;+ output() : void&#10;+ age() : int&#10;+ BMI() : float&#10;+ FrecuenciaCardiacaMaxima() : int&#10;+ FrecuenciaCardicaEsperada() : String" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#333333;" parent="3" vertex="1">
+                    <mxGeometry y="148" width="440" height="322" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
