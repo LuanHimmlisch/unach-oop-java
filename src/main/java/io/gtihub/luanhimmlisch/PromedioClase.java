@@ -21,7 +21,7 @@ public class PromedioClase {
             System.out.println("Escriba la calificacion: "); // indicador
             int calificacion = entrada.nextInt(); // recibe siguiente calificación de entrada
             total = total + calificacion; // suma calificación al total
-            contadorCalificaciones = contadorCalificaciones + 1; // incrementa el contador en 1”
+            contadorCalificaciones = contadorCalificaciones + 1; // incrementa el contador en 1"
         }
         // fase de terminación
         int promedio = total / 10; // la división de enteros produce resultado entero
