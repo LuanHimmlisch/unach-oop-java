@@ -12,8 +12,8 @@ public class Empleado {
             Fecha fechaDeContratacion) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.fechaNacimiento = fechaNacimiento;
-        this.fechaContratacion = fechaContratacion;
+        this.fechaNacimiento = fechaDeNacimiento;
+        this.fechaContratacion = fechaDeContratacion;
     }
 
     // convierte Empleado a formato String
